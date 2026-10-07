@@ -4,9 +4,18 @@ Página modelo para apresentar a psicólogos. Ela pode ser personalizada pelo pr
 
 HTML, CSS e JavaScript puros, sem etapa de build.
 
+## Páginas
+
+| Arquivo          | Modelo                                   |
+|------------------|------------------------------------------|
+| `index.html`     | Psicóloga (Marina Albuquerque, cor sálvia) |
+| `psicologo.html` | Psicólogo (Rafael Menezes, cor petróleo)   |
+
+As duas usam o mesmo CSS e JS. O que muda são os dados padrão, definidos no topo de cada HTML em `window.PADRAO_PAGINA` (sobrescrevem o objeto `PADRAO` de `assets/js/main.js`). A personalização por link e o painel `?demo=1` funcionam nas duas.
+
 ## Como abrir
 
-O vídeo do YouTube precisa que a página seja servida por um servidor (aberta direto pelo arquivo, o player pode recusar a reprodução). Na pasta do projeto:
+O vídeo do YouTube só toca dentro da página quando ela é servida por um servidor. Aberta direto pelo arquivo (duplo clique no `index.html`), o YouTube recusa o player (erro 153); nesse caso o botão abre o vídeo no YouTube em outra aba. Na pasta do projeto:
 
 ```bash
 python -m http.server 5173
@@ -14,7 +23,7 @@ python -m http.server 5173
 npx serve .
 ```
 
-Depois acesse `http://localhost:5173`.
+Depois acesse `http://localhost:5173` (psicóloga) ou `http://localhost:5173/psicologo.html` (psicólogo).
 
 Para publicar, basta enviar a pasta inteira para qualquer hospedagem estática (Netlify, Vercel, GitHub Pages, Hostinger etc.).
 
@@ -60,5 +69,5 @@ Ao adaptar o texto para um cliente, mantenha esses pontos.
 ## Créditos
 
 - Vídeo: *Na travessia do vazio*, animação de Gabriel Peixe ([YouTube](https://www.youtube.com/watch?v=ufQ3LJzSdsc)), incorporado pelo player oficial.
-- Fotos: [Unsplash](https://unsplash.com) (licença Unsplash). Para um cliente real, substitua `assets/img/psicologa.webp` pela foto profissional dele.
+- Fotos: [Unsplash](https://unsplash.com) (licença Unsplash). Para um cliente real, substitua `assets/img/psicologa.webp` ou `assets/img/psicologo.webp` pela foto profissional dele (ou use o parâmetro `foto`).
 - Ícones: [Phosphor Icons](https://phosphoricons.com). Fonte: Plus Jakarta Sans (Google Fonts).

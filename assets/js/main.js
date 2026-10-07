@@ -7,7 +7,9 @@
 (() => {
   'use strict';
 
-  /* ---------- Dados padrão (edite aqui para fixar um cliente) ---------- */
+  /* ---------- Dados padrão (edite aqui para fixar um cliente) ----------
+     Cada página pode sobrescrever estes valores definindo
+     window.PADRAO_PAGINA antes de carregar este arquivo. */
   const PADRAO = {
     nome: 'Marina Albuquerque',
     titulo: 'Psicóloga',
@@ -19,6 +21,7 @@
     email: 'contato@marinaalbuquerque.com.br',
     foto: 'assets/img/psicologa.webp',
     cor: 'salvia',
+    ...(window.PADRAO_PAGINA || {}),
   };
 
   const CAMPOS = Object.keys(PADRAO);
