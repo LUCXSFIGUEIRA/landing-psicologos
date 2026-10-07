@@ -38,8 +38,6 @@
   color-scheme: light;
 }
 
-/* Paleta da página do psicólogo (a padrão, sálvia, está acima) */
-[data-cor="petroleo"]  { --accent-l: #1E4F63; --accent-d: #86BCD1; }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {

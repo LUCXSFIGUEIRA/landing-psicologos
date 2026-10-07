@@ -9,7 +9,17 @@ Duas páginas modelo para apresentar a psicólogos: uma de psicóloga e uma de p
 | Psicóloga  | `psicologa/index.html` | https://lucxsfigueira.github.io/landing-psicologos/psicologa/ |
 | Psicólogo  | `psicologo/index.html` | https://lucxsfigueira.github.io/landing-psicologos/psicologo/ |
 
-As duas compartilham `assets/` (CSS, JS e imagens). Nome, CRP, contatos e textos estão escritos direto em cada HTML. A cor de destaque vem do atributo `data-cor` na tag `<html>` (`salvia` ou `petroleo`).
+As duas mostram linguagens visuais diferentes, para o cliente ver as possibilidades:
+
+| | Psicóloga | Psicólogo |
+|---|---|---|
+| Estilo | Acolhedor e suave | Editorial, tipo revista |
+| Cores | Verde-sálvia | Azul cobalto sobre fundo neutro |
+| Títulos | Plus Jakarta Sans | EB Garamond (serifada) |
+| Formas | Cantos arredondados, botões em pílula | Cantos retos, linhas finas |
+| CSS | `assets/css/style.css` | `assets/css/editorial.css` |
+
+O JavaScript (`assets/js/main.js`: menu mobile, FAQ, vídeo e animações) é compartilhado. Nome, CRP, contatos e textos estão escritos direto em cada HTML. As duas páginas têm modo claro e escuro, seguindo o sistema do visitante.
 
 Os botões "Agendar conversa" abrem o WhatsApp com uma mensagem pronta. O número está nos links `https://wa.me/...` de cada página.
 
