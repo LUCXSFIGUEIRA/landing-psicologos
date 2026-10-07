@@ -146,6 +146,11 @@
     const btn = $('.video__facade', box);
     btn.addEventListener('click', () => {
       const id = box.dataset.videoId;
+      // aberto direto do arquivo (file://) o YouTube recusa o player (erro 153)
+      if (location.protocol === 'file:') {
+        window.open(`https://www.youtube.com/watch?v=${id}`, '_blank', 'noopener');
+        return;
+      }
       const iframe = document.createElement('iframe');
       iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
       iframe.title = box.dataset.videoTitle || 'Vídeo';
@@ -154,7 +159,7 @@
       iframe.allowFullscreen = true;
       box.replaceChildren(iframe);
       iframe.focus();
-    }, { once: true });
+    });
   });
 
   /* ---------- Entradas no scroll ---------- */

@@ -240,6 +240,7 @@ em { font-style: italic; font-weight: 600; color: var(--accent); }
   padding: 120px var(--gutter) 40px;
   opacity: 0; transition: opacity .5s var(--ease);
 }
+.menu-mobile[hidden] { display: none; }
 .menu-mobile.is-open { opacity: 1; }
 .menu-mobile nav { display: grid; gap: 8px; }
 .menu-mobile a:not(.btn) {
